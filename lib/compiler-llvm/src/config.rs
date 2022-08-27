@@ -156,6 +156,14 @@ impl LLVM {
                 info: true,
                 machine_code: true,
             }),
+            Architecture::Bpfel => InkwellTarget::initialize_bpf(&InitializationConfig {
+              asm_parser: true,
+              asm_printer: true,
+              base: true,
+              disassembler: true,
+              info: true,
+              machine_code: true,
+            }),
             // Architecture::Arm(_) => InkwellTarget::initialize_arm(&InitializationConfig {
             //     asm_parser: true,
             //     asm_printer: true,
